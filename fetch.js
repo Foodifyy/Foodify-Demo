@@ -28,7 +28,7 @@ function showPreview(event) {
 	if (event.target.files.length > 0) {
 		var reader = new FileReader();
 		reader.onload = function() {
-			var preview = document.getElementById("file-ip-1-preview");
+			var preview = window.ocument.getElementById("file-ip-1-preview");
 			preview.src = reader.result;
 			preview.style.display = "block";
 			preview.style.minWidth = `${21}rem`;
