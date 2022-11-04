@@ -8,7 +8,7 @@ async function run() {
 	const formData = new FormData();
 	formData.append('img', base64);
 
-	const res = await axios.post('https://dff3-2405-201-4020-191e-c03f-b596-ec3-70ba.ngrok.io/predictbase64', formData, {
+	const res = await axios.post('https://foodify-axios-image-api-test.ishkapoor.repl.co/', formData, {
 		headers: {
 			"Access-Control-Allow-Origin": "*"
 		}
