@@ -7,7 +7,7 @@ async function send(base64_str) {
 		"Access-Control-Allow-Origin": "*"
 	}
 	// const endpoint = document.getElementById('endpoint').value;
-	let endpoint = sessionStorage.getItem("Endpoint")
+	//let endpoint = sessionStorage.getItem("Endpoint")
 
 	let bodyContent = new FormData();
 	bodyContent.append("base64_str",
