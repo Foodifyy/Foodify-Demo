@@ -7,14 +7,17 @@ async function send(base64_str) {
 		"Access-Control-Allow-Origin": "*"
 	}
 	// const endpoint = document.getElementById('endpoint').value;
-	//let endpoint = sessionStorage.getItem("Endpoint")
+	let endpoint = "https://api.foodifyy.com";
+
+	console.log("Fetch req sent on:", endpoint +
+		"/predictbase64/")
 
 	let bodyContent = new FormData();
 	bodyContent.append("base64_str",
 		base64_str.split('data:image/jpeg;base64,')[1]);
 	bodyContent.append("filename", 'testing_correct_filename');
 
-	let response = fetch("https://api.foodifyy.com/predictbase64/", {
+	let response = fetch(endpoint + "/predictbase64", {
 		method: "POST",
 		mode: "no-cors",
 		body: bodyContent,
